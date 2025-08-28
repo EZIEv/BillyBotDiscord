@@ -24,7 +24,8 @@ async def execute_command(bot: commands.bot, message: discord.Message, command: 
     # Команда "поставь", выполняет поиск трека
     if command.startswith("поставь "):
         # Проверяем, находится ли автор сообщения в голосовом канале.
-        if not message.author.voice: return await message.channel.send("Ты глухой, епта")
+        if not message.author.voice:
+            return await message.channel.send("Ты глухой, епта")
 
         query = command[7:].strip()
         if not query.lower().startswith(("http://", "https://")):
@@ -39,7 +40,8 @@ async def execute_command(bot: commands.bot, message: discord.Message, command: 
     # Команда "убери" убирает трек по номеру
     elif command.startswith("убери "):
         parts = command.split()
-        if len(parts) < 2: return await message.channel.send("**Billy:** укажи номер трека, boy.")
+        if len(parts) < 2:
+            return await message.channel.send("**Billy:** укажи номер трека, boy.")
         try:
             track_number = int(parts[1])
             response = music_cog._remove(message.guild, track_number)
