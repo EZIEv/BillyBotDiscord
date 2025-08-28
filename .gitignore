@@ -1,0 +1,25 @@
+# Файлы окружения и конфигурации
+.env
+
+# Лог-файлы
+*.log
+
+# Куки файлы
+cookies.txt
+
+# Кэш и артефакты Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Виртуальные окружения
+venv/
+.venv/
+env/
+.env/
+ENV/
+
+# Файлы IDE (например, VSCode)
+.vscode/
+.idea/
